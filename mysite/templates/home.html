@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Африканские животные</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        img { width: 500px; border-radius: 10px; cursor: pointer; }
+        .animal { margin: 20px; padding: 20px; border: 2px solid #ccc; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Африканские животные</h1>
+
+    {% for animal in animals %}
+        <div class="animal">
+            <h2>{{ animal.name }}</h2>
+            <a href="{{ animal.link }}">
+                <img src="{{ animal.image }}" alt="{{ animal.name }}">
+            </a>
+            <p>{{ animal.description }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
